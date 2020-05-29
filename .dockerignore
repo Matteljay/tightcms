@@ -1,0 +1,5 @@
+**/.git
+Dockerfile
+server/node_modules/
+server/public/uploads/*
+server/start-nodocker.sh
