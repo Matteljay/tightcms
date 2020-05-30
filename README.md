@@ -20,7 +20,7 @@
   - [Adding different article types to your pages](#adding-pages-and-sub-pages-to-your-website)
   - [Article text editor HTML tricks](#article-text-editor-html-tricks)
   - [Using the Settings menu](#using-the-settings-menu)
-  - [Using the MediaManage menu](#using-the-mediamanage-menu)
+  - [Using the Media menu](#using-the-media-menu)
 - [Technical details](#technical-details)
 - [Contact info & donations](#contact-info--donations)
 
@@ -94,11 +94,11 @@ Care was taken to make TightCMS as secure as reasonably possible. However there 
 
 ## Documentation
 
-There are several features demonstrated in the introduction video. Here listed again with some details and tricks. To access the site-admin login screen, you can browse to http://your-server-ip/login, typing this yourself or bookmarking that page. On a PC however a trick is to hold the `Alt` key while mouse-clicking on an **empty** part of the menu bar. After logging in, there is also an ability to change the site-admin's password, for that go to http://your-server-ip/changepass
+There are several features demonstrated in the introduction video. Here listed again with some details and tricks. To access the site-admin login screen, you can browse to http://your-server-ip/login, typing this yourself or bookmarking that page. On a PC however a trick is to hold the `Alt` key while mouse-clicking on an **empty** part of the menu bar. After logging in, there is also an ability to change the site-admin's password, for that go to http://your-server-ip/changepass.
 
 ### Adding pages and sub-pages to your website
 
-The Groups menu makes it possible to add pages, sub-pages, rename them and move them around. Pretty straight forward. But here is a trick: you can move a group-A with subgroups-A attached, **inside** of group-B, then no site visitor can access subgroups-A anymore. Rest assured all the linked articles will still exist and you can undo the operation at any time by moving it out. You have temporarily hidden parts of your website.
+The Groups menu makes it possible to add pages, sub-pages, rename them and move them around. Pretty straight forward. But here is a trick: you can move a group-A with subgroups-A attached, **inside** of group-B. You've nested subgroups-A one level too deep, now no site visitor can access those. Rest assured all the linked articles will still exist and you can undo the operation at any time by moving it out. You have temporarily hidden parts of your website.
 
 ### Adding different article types to your pages
 
@@ -144,9 +144,9 @@ On the site-admin's Settings page, several changes can be made dynamically to yo
 
 Menu color and footer color will show a color picker. Background and foreground settings will offer a more extensive dialog with different fill and image options.
 
-Some fields require a **Path to ...**. Here you could fill out an URL to an external image on the web. But it is much better and faster to use a local link to a file from the MediaManage page. There you can click an image file to copy the link to your clipboard. Then you can paste it in the required field on the Settings page. A local link starts with `/` instead of `http://`.
+Some fields require a **Path to ...**. Here you could fill out an URL to an external image on the web. But it is much better and faster to use a local link to a file from the Media page. There you can click an image file to copy the link to your clipboard. Then you can paste it in the required field on the Settings page. A local link starts with `/` instead of `http://`.
 
-### Using the MediaManage menu
+### Using the Media menu
 
 Here you can upload any file you want from your local device or multiple at once. After the new file's name is displayed, it is immediately available for public use. You will have to share the link of course. Click the file name to copy its local link to your clipboard. Then you can integrate it into any article, for example `<a href="/your-local-link">TEST</a>` or `<img src="/your-picture.jpg" width="100%" />`. Or paste it on the Settings page where **Path to ...** is required.
 
@@ -154,7 +154,7 @@ On the right of each file you can use file operations: download, rename or delet
 
 The **DB backup** button allows you to instantly save all of your work. Files ending with the name `MongoDB-TightCMS.json` are treated as special backup files. If you click them, a confirmation dialog will pop up asking you if you want to overwrite the current website with the backup. Also make sure you download those backup files to your own local machine for added peace of mind.
 
-Note that if you're on PC, you can hold the `Alt` key while left-clicking **DB backup**. Then a confirmation dialog will pop up asking you if you want to delete everything in the database and factory reset your website. This is a hidden trick mostly for developers but might be useful if you want to start with a clean slate. No files or backups will be deleted but you will need to create a new site-admin password.
+Note that if you're on PC, you can hold the `Alt` key while left-clicking **DB backup**. Then a confirmation dialog will pop up asking you if you want to delete everything in the database and factory reset your website. This is a hidden trick mostly for developers but might be useful if you want to start with a clean slate. No backup or regular files will be deleted but you will need to create a new site-admin password.
 
 ## Technical details
 
