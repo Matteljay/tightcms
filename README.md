@@ -7,20 +7,37 @@
 - IDE: Visual Studio Code
 - Homepage: https://libersystems.com
 
-## Screenshots
+## Table of contents
 
-<img src="screenshots/1.jpg" alt="Welcome screen" style="object-fit:contain; width:300px; height:300px; border-style:outset;" onclick="window.open(this.src)" />
-<img src="screenshots/2.jpg" alt="Group Editor" style="object-fit:contain; width:300px; height:300px; border-style:outset;" onclick="window.open(this.src)" />
-<img src="screenshots/3.jpg" alt="Settings Dialog" style="object-fit:contain; width:300px; height:300px; border-style:outset;" onclick="window.open(this.src)" />
-<img src="screenshots/4.jpg" alt="Media Manager" style="object-fit:contain; width:300px; height:300px; border-style:outset;" onclick="window.open(this.src)" />
-<img src="screenshots/5.jpg" alt="Article Editor" style="object-fit:contain; width:300px; height:300px; border-style:outset;" onclick="window.open(this.src)" />
-<img src="screenshots/6.jpg" alt="Customized" style="object-fit:contain; width:300px; height:300px; border-style:outset;" onclick="window.open(this.src)" />
+- [About](#about)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+  - [Docker microservices](#docker-microservices)
+  - [Manual installation](#manual-installation)
+  - [Important tweaks and security notes](#important-tweaks-and-security-notes)
+- [Documentation](#documentation)
+  - [Adding pages and sub-pages to your website](#adding-pages-and-sub-pages-to-your-website)
+  - [Adding different article types to your pages](#adding-pages-and-sub-pages-to-your-website)
+  - [Article text editor HTML tricks](#article-text-editor-html-tricks)
+  - [Using the Settings menu](#using-the-settings-menu)
+  - [Using the MediaManage menu](#using-the-mediamanage-menu)
+- [Technical details](#technical-details)
+- [Contact info & donations](#contact-info--donations)
 
 ## About
 
 TightCMS is a full Content Management System written in [VueJS](https://vuejs.org/). It is light weight and easy to set up on any [VPS](https://en.wikipedia.org/wiki/Virtual_private_server). With this application, your bloggers or HTML/CSS savvy friends or customers can quickly get started creating a website. They will retain complete control of their own data and can easily upload files to integrate into their website. Or use it as an online file sharing repository. It was loosly inspired by [Joomla](https://www.joomla.org/) and [WordPress](https://wordpress.org/). However they are a lot more feature-rich. If you want a fast, light, secure and easy-to-set-up solution, TightCMS is for you.
 
 Introduction video: [bitchute.com](https://www.bitchute.com/video/oX3AgHj0jlUX/) [youtube.com](https://youtu.be/uv1ny-NJT_k)
+
+## Screenshots
+
+![Welcome Screen](screenshots/1.jpg)
+![Group Editor](screenshots/2.jpg)
+![Settings Dialog](screenshots/3.jpg)
+![Media Manager](screenshots/4.jpg)
+![Article Editor](screenshots/5.jpg)
+![Customized Theme](screenshots/6.jpg)
 
 ## Installation
 
