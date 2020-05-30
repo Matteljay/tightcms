@@ -26,7 +26,7 @@
 
 ## About
 
-TightCMS is a full Content Management System written in [VueJS](https://vuejs.org/). It is light weight and easy to set up on any [VPS](https://en.wikipedia.org/wiki/Virtual_private_server). With this application, your bloggers or HTML/CSS savvy friends or customers can quickly get started creating a website. They will retain complete control of their own data and can easily upload files to integrate into their website. Or use it as an online file sharing repository. It was loosly inspired by [Joomla](https://www.joomla.org/) and [WordPress](https://wordpress.org/). However they are a lot more feature-rich. If you want a fast, light, secure and easy-to-set-up solution, TightCMS is for you.
+TightCMS is a full Content Management System written in [VueJS](https://vuejs.org/). It is light weight and easy to set up on any [VPS](https://en.wikipedia.org/wiki/Virtual_private_server). With this application, your bloggers or HTML/CSS savvy friends or customers can quickly get started creating a website. They will retain complete control of their own data and can easily upload files to integrate into their website. Or use it as an online file sharing repository. It was loosely inspired by [Joomla](https://www.joomla.org/) and [WordPress](https://wordpress.org/). However they are a lot more feature-rich. If you want a fast, light, secure and easy-to-set-up solution, TightCMS is for you.
 
 Introduction video: [bitchute.com](https://www.bitchute.com/video/oX3AgHj0jlUX/) [youtube.com](https://youtu.be/uv1ny-NJT_k)
 
@@ -41,11 +41,11 @@ Introduction video: [bitchute.com](https://www.bitchute.com/video/oX3AgHj0jlUX/)
 
 ## Installation
 
-This section is meant for the system administrator controlling the VPS, not the site administrator. If you want to know in detail how TightCMS works with all the special tricks, skip to the documentation section.
+This section is meant for the system administrator controlling the VPS, not the site administrator. If you want to know in detail how TightCMS works with all the special tricks, skip to the [documentation section](#documentation).
 
 Two types of installation will be discussed, one with Docker and one without. The first option is the fastest and easiest. Using the docker-compose command, the database and `uploads/` mount point will be automatically created for you.
 
-The second option is useful if your server doesn't have an AMD64 architecture. On Raspberry Pi for example (ARM architecture), go with the manual installation.
+The second option is useful if your server doesn't have an AMD64 architecture. On a Raspberry Pi for example (ARM architecture), go with the manual installation.
 
 There is also a third section with important production environment tweaks.
 
@@ -58,7 +58,7 @@ wget https://github.com/Matteljay/tightcms/blob/master/docker-compose.yml
 docker-compose up -d
 ```
 Congratulations, a TightCMS demo should now be available from the internet at http://your-server-ip
-For a production environment, you definitely should personalize some security settings inside of `docker-compose.yml`. The content of variables `USER_PW_SALT` and `JWT_SECRET` should both be replaced by passwords of your chosing.
+For a production environment, you definitely should personalize some security settings inside of `docker-compose.yml`. The content of variables `USER_PW_SALT` and `JWT_SECRET` should both be replaced by passwords of your choosing.
 
 ### Manual installation
 
@@ -73,7 +73,7 @@ cd tightcms/server/
 sudo screen -d -m ./start-nodocker.sh
 ```
 And there you go, TightCMS running on your machine and available from the internet at http://your-server-ip
-For a production environment, you definitely should personalize some security settings inside of `start-nodocker.sh`. The content of variables `USER_PW_SALT` and `JWT_SECRET` should both be replaced by passwords of your chosing.
+For a production environment, you definitely should personalize some security settings inside of `start-nodocker.sh`. The content of variables `USER_PW_SALT` and `JWT_SECRET` should both be replaced by passwords of your choosing.
 
 ### Important tweaks and security notes
 
@@ -86,7 +86,7 @@ It is highly recommended to use a web server and set it up as a reverse proxy. I
 
 Setting up a web server is beyond the scope of this documentation so start with the [Nginx guide](https://docs.nginx.com/nginx/admin-guide/web-server/). Then you'll want to change TightCMS' `EXPRESS_PORT` server setting to 5000 and configure Nginx to be set up as a [reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/).
 
-Care was taken to make TightCMS as secure as reasonibly possible. However there has been no independent security audit and no warranty is given. With a bit of extra effort however, it is possible to run TightCMS as user **node** (GID:UID = 1000:1000). That should make it harder for hackers to do [bad things](https://stackoverflow.com/questions/19054029/security-of-docker-as-it-runs-as-root-user) on your VPS if a security vulnerability exists. These are the steps to run TightCMS as a user in your Docker container:
+Care was taken to make TightCMS as secure as reasonably possible. However there has been no independent security audit and no warranty is given. With a bit of extra effort however, it is possible to run TightCMS as user **node** (GID:UID = 1000:1000). That should make it harder for hackers to do [bad things](https://stackoverflow.com/questions/19054029/security-of-docker-as-it-runs-as-root-user) on your VPS if a security vulnerability exists. These are the steps to run TightCMS as a user in your Docker container:
 - Make sure you set the `EXPRESS_PORT` setting higher than 1023, non-root users cannot use low port numbers like 80.
 - Then add the line `user: node` to the service of your docker-compose.yml
 - Update permissions for uploaded files with `chown -R 1000:1000 uploads/`
@@ -158,23 +158,23 @@ Note that if you're on PC, you can hold the `Alt` key while left-clicking **DB b
 
 ## Technical details
 
-The frontend is an [SPA](https://en.wikipedia.org/wiki/Single-page_application) loaded once in its entirety during initial visit or page refresh. A quick connection is made to the Express backend to fetch the customizations and site content data. The speed and reaction time for browsing on the page are very pleasant as they are determined completely client-side. The backend is always ready to receive site-admin commands via the online integrated menus after authentication. A high degree of privacy is respected via both client-side and server-side password hashing & salting before storing in MongoDB.
+The front-end is an [SPA](https://en.wikipedia.org/wiki/Single-page_application) loaded once in its entirety during initial visit or page refresh. A quick connection is made to the Express back-end to fetch the customizations and site content data. The speed and reaction time for browsing on the page are very pleasant as they are determined completely client-side. The back-end is always ready to receive site-admin commands via the online integrated menus after authentication. A high degree of privacy is respected via both client-side and server-side password hashing & salting before storing in MongoDB.
 
 TightCMS has been tested most extensively on the Brave Browser and Mozilla Firefox. Microsoft Edge was given a quick test as were several Android phones and iPhones. Therefore it is assumed that Chromium, Google Chrome and MacOS Safari shouldn't have problems.
 
 It started as a self-study project in order to become fluent in these technologies:
-- VueJS modern Javascript framework
+- VueJS modern JavaScript framework
 - Vuex memory state management
 - Vuetify components (dialogs, buttons, bootstrap-based style,...)
 - Express NodeJS server
 - MongoDB No-SQL Database
 - Docker containerization microservices
-- Using and writing JSON Web API's
+- Using and writing JSON Web APIs
 - CRUD apps with smartphone-friendly re-ordering capabilities
 - Web security and authentication via JWT tokens
 - Live file management application
 
-But also to brush up on general HTML, CSS and Javascript (ECMAScript 6) skills.
+But also to brush up on general HTML, CSS and JavaScript (ECMAScript 6) skills.
 
 The size of the code base is approximately 2500 lines, broken down here:
 - 14 views + components: 890 + 730
