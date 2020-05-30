@@ -17,7 +17,7 @@
   - [Important tweaks and security notes](#important-tweaks-and-security-notes)
 - [Documentation](#documentation)
   - [Adding pages and sub-pages to your website](#adding-pages-and-sub-pages-to-your-website)
-  - [Adding different article types to your pages](#adding-pages-and-sub-pages-to-your-website)
+  - [Adding different article types to your pages](#adding-different-article-types-to-your-pages)
   - [Article text editor HTML tricks](#article-text-editor-html-tricks)
   - [Using the Settings menu](#using-the-settings-menu)
   - [Using the Media menu](#using-the-media-menu)
