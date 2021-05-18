@@ -6,7 +6,7 @@
       <v-text-field filled label="Password" v-model="password"
         :append-icon="show1 ? 'fa-eye' : 'fa-eye-slash'"
         @click:append="show1 = !show1"
-        :type="show1 ? 'text' : 'password'"
+        :type="show1 ? 'password' : 'text'"
       />
       <!-- <v-divider /> -->
       <v-btn class="primary mt-2" type="submit" :disabled="!validForm">Login</v-btn>
@@ -20,7 +20,7 @@ import sha256 from 'crypto-js/sha256'
 export default {
   data() {
     return {
-      show1: false,
+      show1: true,
       validForm: false,
       email: 'tightcms@admin.one',
       password: '',

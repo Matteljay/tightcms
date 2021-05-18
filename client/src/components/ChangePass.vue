@@ -10,20 +10,20 @@
         <v-text-field filled label="Old password" v-model="oldpw"
           :append-icon="show1 ? 'fa-eye' : 'fa-eye-slash'"
           @click:append="show1 = !show1"
-          :type="show1 ? 'text' : 'password'"
+          :type="show1 ? 'password' : 'text'"
         />
       </template>
       <v-text-field filled label="New password" v-model="newpw"
         :rules="[newRules.required, newRules.counter]"
         :append-icon="show2 ? 'fa-eye' : 'fa-eye-slash'"
         @click:append="show2 = !show2"
-        :type="show2 ? 'text' : 'password'"
+        :type="show2 ? 'password' : 'text'"
       />
       <v-text-field filled label="Repeat new" v-model="repeatpw"
         :rules="[repeatRules.required, repeatRules.matching]"
         :append-icon="show2 ? 'fa-eye' : 'fa-eye-slash'"
         @click:append="show2 = !show2"
-        :type="show2 ? 'text' : 'password'"
+        :type="show2 ? 'password' : 'text'"
       />
       <!-- <v-divider /> -->
       <v-btn class="primary mt-2" type="submit" :disabled="!validForm">Send</v-btn>
@@ -37,8 +37,8 @@ import sha256 from 'crypto-js/sha256'
 export default {
   data() {
     return {
-      show1: false,
-      show2: false,
+      show1: true,
+      show2: true,
       validForm: false,
       email: 'tightcms@admin.one',
       username: 'Admin',

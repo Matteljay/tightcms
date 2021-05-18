@@ -3,7 +3,7 @@
 
 - License: MIT License
 - Author: Matteljay
-- Language: VueJS
+- Language: Vue.JS
 - IDE: Visual Studio Code
 - Homepage: https://libersystems.com
 
@@ -53,11 +53,13 @@ There is also a third section with important production environment tweaks.
 
 A modern VPS should already have [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed. These 3 commands offer the fastest startup & working demonstration based on the example [docker-compose.yml](docker-compose.yml)
 ```
-mkdir ~/tightcms && cd $_
-wget https://github.com/Matteljay/tightcms/blob/master/docker-compose.yml
+mkdir -p tightcms/uploads/
+cd tightcms/
+chown 1000:1000 uploads/
+wget https://github.com/Matteljay/tightcms/raw/master/docker-compose.yml
 docker-compose up -d
 ```
-Congratulations, a TightCMS demo should now be available from the internet at http://your-server-ip
+TightCMS should now be available from the internet at http://your-server-ip
 For a production environment, you definitely should personalize some security settings inside of `docker-compose.yml`. The content of variables `USER_PW_SALT` and `JWT_SECRET` should both be replaced by passwords of your choosing.
 
 ### Manual installation
