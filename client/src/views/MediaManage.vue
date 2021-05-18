@@ -219,6 +219,7 @@ export default {
       if(files.length <= 0) {
         return
       }
+      this.$refs.file.value = null // fix: allow upload of same file multiple times in some browsers
       this.pushFiles({ files, path: this.getCurrentFolder })
     },
     generateBackup() {
