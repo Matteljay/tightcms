@@ -20,7 +20,7 @@ const connectDB = async () => {
     return client.db(name).collection('db')
 }
 
-const checkAccess = async (req, res) => {
+const checkAccess = (req, res) => {
     if(!req || !req.headers || !req.headers.authorization) {
         return false
     }
@@ -33,7 +33,7 @@ const checkAccess = async (req, res) => {
     }
 }
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
     if(checkAccess(req, res)) {
         res.status(201).send('Access granted')
     } else {
