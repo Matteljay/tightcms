@@ -34,8 +34,11 @@ const checkAccess = async (req, res) => {
 }
 
 router.get('/', async (req, res) => {
-    if(checkAccess(req, res))
-        res.status(201).send()
+    if(checkAccess(req, res)) {
+        res.status(201).send('Access granted')
+    } else {
+        res.status(403).send('Access denied')
+    }
 })
 
 router.post('*', async (req, res) => {
