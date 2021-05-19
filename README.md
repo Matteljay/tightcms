@@ -51,7 +51,7 @@ There is also a third section with important production environment tweaks.
 
 ### Docker microservices
 
-A modern VPS should already have [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed. These 3 commands offer the fastest startup & working demonstration based on the example [docker-compose.yml](docker-compose.yml)
+A modern VPS should already have [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) installed. These few commands offer the fastest startup & working demonstration based on the example [docker-compose.yml](docker-compose.yml)
 ```
 mkdir -p tightcms/uploads/
 cd tightcms/
