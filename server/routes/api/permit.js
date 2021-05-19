@@ -12,12 +12,22 @@ const hash = (name, pass) => sha512(name + pwSalt + pass).toString()
 const connectDB = async () => {
     const login = (process.env.DB_USER && process.env.DB_PASS) ?
         `${process.env.DB_USER}:${process.env.DB_PASS}@` : ''
-    const host = process.env.DB_HOST || 'mongo'
+    const host = process.env.DB_HOST || 'localhost'
     const port = process.env.DB_PORT || 27017
     const name = process.env.DB_NAME || 'tightcms_content'
-    const client = await mongodb.MongoClient.connect(
-        `mongodb://${login}${host}:${port}/${name}`, { useUnifiedTopology: true })
-    return client.db(name).collection('db')
+    try {
+        const client = await mongodb.MongoClient.connect(
+            `mongodb://${login}${host}:${port}/${name}`,
+            { useUnifiedTopology: true, serverSelectionTimeoutMS: 5000 },
+        )
+        return client.db(name).collection('db')
+    } catch(err) {
+        console.log('Mongo Database connection failed: ' + err)
+        console.log('Shutting down...')
+        const waitFor = delay => new Promise(resolve => setTimeout(resolve, delay))
+        await waitFor(5000)
+        process.exit(0)
+    }
 }
 
 const checkAccess = (req, res) => {

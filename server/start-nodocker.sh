@@ -4,7 +4,7 @@ set -e
 [[ -d node_modules ]] || npm ci --only=production
 
 export EXPRESS_PORT=80
-export DB_HOST=localhost
+#export DB_HOST=localhost
 #export DB_PORT=27017
 #export DB_USER=
 #export DB_PASS=

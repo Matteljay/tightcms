@@ -214,13 +214,13 @@ export default {
     download(name) {
       this.downloadFile({ name, path: this.getCurrentFolder })
     },
-    addFiles() {
+    async addFiles() {
       const files = this.$refs.file.files
       if(files.length <= 0) {
         return
       }
-      this.$refs.file.value = null // fix: allow upload of same file multiple times in some browsers
-      this.pushFiles({ files, path: this.getCurrentFolder })
+      await this.pushFiles({ files, path: this.getCurrentFolder })
+      this.$refs.file.value = null // TODO!! fix: allow upload of same file multiple times in some browsers
     },
     generateBackup() {
       this.setCurrentFolder(this.backupsFolder)
