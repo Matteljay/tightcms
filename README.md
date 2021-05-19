@@ -68,7 +68,7 @@ First, you will need to install MongoDB manually. You could use the [community i
 
 Next, you may want to use `screen` (or [systemd](https://www.shellhacks.com/systemd-service-file-example/)) so that you can log out of your VPS and keep TightCMS running as a service: `apt install screen`
 
-Then these 3 commands will get you started the quickest:
+Then these few commands will get you started the quickest:
 ```
 git clone https://github.com/matteljay/tightcms
 cd tightcms/server/
