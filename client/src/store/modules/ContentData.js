@@ -10,7 +10,7 @@ const state = {
     error: '',
     defaultSettings: { faviconPath: '', pageTitle: 'MyWebsite', urlText: '',
         menuColor: '#267676', pageWidth: '960px',
-        fontFamily: 'Arial', fontSize: '16px', listImage: '', dateDisplay: 'yyyy-mm-dd',
+        fontFamily: 'Arial, sans-serif', fontSize: '16px', listImage: '', dateDisplay: 'yyyy-mm-dd',
         bgType: 'Solid color', bgColor: '#C1BCB5', bgPath: '',
         fgType: 'Solid color', fgColor: '#CBD8DE', fgPath: '',
         footerColor: '#8E8456', footerText: '2020 - powered by TightCMS',

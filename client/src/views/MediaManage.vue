@@ -1,6 +1,6 @@
 <template>
   <div class="MediaManage">
-    <h1>Manage your Media</h1>
+    <h1 class="mb-2">Manage your Media</h1>
     <!-- current folder + go up + go home -->
     <v-container pl-6 py-0>
       <v-row class="align-center">

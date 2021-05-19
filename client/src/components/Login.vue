@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-form v-model="validForm" @submit.prevent="submitForm">
-      <h1>Sign in</h1>
+      <h1 class="mb-2">Sign in</h1>
       <!-- <v-text-field filled label="E-mail" v-model="email" /> -->
       <v-text-field filled label="Password" v-model="password"
         :append-icon="show1 ? 'fa-eye' : 'fa-eye-slash'"

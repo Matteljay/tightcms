@@ -1,6 +1,6 @@
 <template>
   <div class="GroupEdit">
-    <h1>Group Editor</h1>
+    <h1 class="mb-2">Group Editor</h1>
     <div class="blue lighten-1 px-3 py-1 ma-2"
       v-for="bookLine in getSubsWithAddBar()" :key="bookLine.page._id"
     >

@@ -25,7 +25,7 @@
                 to="/logout">Logout</v-btn>
             </template>
           </div>
-          <v-content class="pa-2 foreground">
+          <v-main class="pa-2 foreground">
             <v-container>
               <!-- main views get rendered here -->
               <div v-if="!$route">
@@ -35,7 +35,7 @@
               </div>
               <router-view v-if="$route" :key="$route.path" />
             </v-container>
-          </v-content>
+          </v-main>
           <v-footer padless v-if="!!getSettings.footerText">
             <v-card class="text-center" tile flat width="100%"
               :color="getSettings.footerColor">

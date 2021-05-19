@@ -1,6 +1,6 @@
 <template>
   <div class="Settings">
-    <h1>Settings</h1>
+    <h1 class="mb-2">Settings</h1>
     <div class="ma-6">
       <v-card class="transparent px-6 pt-2">
         <v-text-field label="Web page title"
@@ -175,8 +175,24 @@ export default {
         { text: 'April 3rd, 2019', value: 'mmmm dS, yyyy' }
       ],
       fontFamilyOptions: [
-        'Arial', 'Roboto', 'Times New Roman', 'Times', 'Courier New', 'Courier', 'Verdana', 'Georgia',
-        'Palatino', 'Garamond', 'Bookman', 'Comic Sans MS', 'Candara', 'Arial Black', 'Impact',
+        'Arial, sans-serif',
+        'Arial Black, sans-serif',
+        'Candara, sans-serif',
+        'Lato, sans-serif',
+        'Verdana, sans-serif',
+        'Courier, monospace',
+        'Courier New, monospace',
+        'Bookman, serif',
+        'Garamond, serif',
+        'Georgia, serif',
+        'Palatino, serif',
+        'Times New Roman, serif',
+        'Times, serif',
+        'Apple Chancery, cursive',
+        'Bradley Hand, cursive',
+        'Comic Sans MS, cursive',
+        'Impact, fantasy',
+        'Luminari, fantasy',
       ],
       fontSizeOptions: [ '10px', '12px', '13px', '14px', '15px', { text: '16px (default)', value: '16px' },
         '18px', '20px', '21px', '26px' ],

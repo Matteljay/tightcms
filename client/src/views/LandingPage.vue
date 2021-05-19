@@ -75,7 +75,7 @@
         <v-icon>fa-angle-up</v-icon>
       </v-btn>
     </transition>
-    <v-snackbar :timeout=0 :value="!!getMoveArticle" color="secondary" right top>
+    <v-snackbar :timeout=-1 :value="!!getMoveArticle" color="secondary" right top>
       Select drop point to move article
       <v-btn dark text @click="setMoveArticle(false)">Cancel</v-btn>
     </v-snackbar>

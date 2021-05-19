@@ -2,11 +2,11 @@
   <div>
     <v-form v-model="validForm" @submit.prevent="submitForm">
       <template v-if="getNeedWelcome">
-        <h1>Welcome to TightCMS</h1>
+        <h1 class="mb-2">Welcome to TightCMS</h1>
         <p>Please provide an administrator password</p>
       </template>
       <template v-else>
-        <h1>Change administrator password</h1>
+        <h1 class="mb-2">Change administrator password</h1>
         <v-text-field filled label="Old password" v-model="oldpw"
           :append-icon="show1 ? 'fa-eye' : 'fa-eye-slash'"
           @click:append="show1 = !show1"
