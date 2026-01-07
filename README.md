@@ -5,7 +5,6 @@
 - Author: Matteljay
 - Language: Vue.JS
 - IDE: Visual Studio Code
-- Homepage: https://libersystems.com
 
 ## Table of contents
 
@@ -190,3 +189,4 @@ Check out the [DEV-STRUCTS.md](DEV-STRUCTS.md) to understand how the site-admin'
 ## Contact info & donations
 
 More info here: [Contact](CONTACT.md), [QR-codes](donate-qr.jpg)
+
